@@ -1,0 +1,27 @@
+---
+name: git-helper
+description: 自动分析 git diff，生成符合 Angular 规范的 commit message，并执行提交、拉取和推送。触发词：“提交代码”、“push代码”。
+---
+
+# Skill: Git 提交专家
+
+## 核心任务
+1. **分析变更**：执行 `git diff --cached` 获取暂存区变动。
+2. **分类定位**：feat, fix, docs, style, refactor, test, chore。
+3. **格式化**：`<type>(<scope>): <subject>`。
+
+## 执行指令 (Action Flow)
+- **第一步**：执行 `git status`。若无暂存，提示用户先 `git add`。
+- **第二步**：执行 `git diff --cached`。
+- **第三步**：生成简洁总结（< 50字，中文）。
+- **第四步**：询问用户确认：“确认提交并推送？[Y/N]”。
+- **第五步（关键修正）**：执行原生 Shell 命令：`git commit -m "[生成的消息]"`。
+  - **!! 严禁使用 Cursor 默认的 Commit 接口 !!**
+  - **!! 严禁添加 --trailer 或任何附加信息 !!**
+  - **!! 确保命令中不包含任何额外的 flag !!**
+- **第六步**：执行 `git pull -r origin [当前分支]`。
+- **第七步**：执行 `git push origin [当前分支]`。
+
+## 约束条件
+- **禁止废话**：不输出解释，直接执行。
+- **消息格式**：仅保留 `<type>(<scope>): <subject>`，禁止在消息末尾添加换行或任何 Trailer 文本。
