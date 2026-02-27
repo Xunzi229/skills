@@ -1,0 +1,11 @@
+microservices-architect
+superpowers
+.DS_Store
+.gradle
+.run
+/out/
+out/
+*/bin
+.vscode
+output
+docs

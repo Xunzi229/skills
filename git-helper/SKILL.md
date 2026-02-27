@@ -1,9 +1,20 @@
 ---
 name: git-helper
-description: 自动分析变动并使用安全脚本提交代码。触发词：“提交代码”、“push代码”。
+description: 自动分析变动并使用安全脚本提交代码。触发词：“提交代码”、“push代码”、“git push”、“push” 。
 ---
 
 # Skill: Git 提交专家 (脚本安全版)
+
+## 触发条件
+
+当用户说出以下任一表述时应用本技能：
+
+- "提交代码"
+- "push代码"
+- "上传代码"
+- "git push"
+- "代码提交"
+- "push"
 
 ## 核心任务
 1. **生成消息**：分析 `git diff --cached`，生成符合 Angular 规范的中文 Commit Message。
