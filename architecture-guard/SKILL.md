@@ -1,9 +1,18 @@
 ---
 name: architecture-guard
 description: 强制执行 Java DDD 四层架构规范，监控层级依赖越权、命名冲突及数据流转合规性。
+globs: ["**/*.java"]
+alwaysApply: false
 ---
 
 # Skill: 架构守卫专家 (DDD & Clean Architecture)
+
+## When to use (触发场景)
+- 当用户要求实现新的业务功能、编写 Service 层或 Controller 层代码时。
+- 当用户执行代码审查（Review）或重构（Refactor）请求时。
+- 当用户询问“依赖是否合规”或“架构是否正确”时。
+- 涉及到 Java 11、SpringBoot 2.1、Mybatis-Plus 及 Gradle 构建的项目环境。
+
 
 ## 监控准则 (The "Forbidden" List)
 1. **禁止越权调用**：

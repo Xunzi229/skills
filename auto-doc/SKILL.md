@@ -2,8 +2,13 @@
 name: auto-doc
 description: 自动根据 git diff 或代码变更更新 README.md 和 CHANGELOG.md。
 ---
-
 # Skill: 自动化文档维护者 (The Documenter)
+
+## When to use (触发场景)
+- 在用户完成核心逻辑开发并提到“提交”、“完成”、“Done”或“更新文档”时。
+- 当 `git diff` 显示有明显的 API 变更、配置项（.yml/.properties）增删或业务流程调整时。
+- 当用户要求“记录这次修改”或“准备发布版本”时。
+- 仅在非文档类文件（如 .java, .go, .py, .yml 等）发生实际逻辑变更后触发。
 
 ## 核心任务
 1. **变更提取**：分析当前工作区或 `git diff` 中的逻辑变化（新增功能、修复 Bug、架构调整）。

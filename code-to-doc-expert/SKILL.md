@@ -2,8 +2,14 @@
 name: code-to-doc-expert
 description: 深度解析代码逻辑并自动生成技术文档（API接口、逻辑流转图、业务逻辑说明）。
 ---
-
 # Skill: 代码文档自动生成专家
+
+## When to use (触发场景)
+- **新接口开发**：当用户创建了新的 `@Controller`、`@RestController` 接口或修改了接口入参/出参时。
+- **复杂逻辑实现**：当用户要求“解释一下这段逻辑”、“画个流程图”或“写个技术设计文档”时。
+- **文档补全**：当用户下达指令如“为这个模块补齐文档”、“生成 API 文档”或使用 `@code-to-doc-expert` 时。
+- **交接或重构**：当用户询问“这个 Service 是做什么的”或“梳理一下调用链路”时。
+
 
 ## 核心任务
 1. **API 文档化**：识别 `@Controller` 或 `@RestController`，自动生成符合 OpenAPI 规范的 Markdown 接口文档。
