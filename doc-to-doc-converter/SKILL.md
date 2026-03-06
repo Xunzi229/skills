@@ -1,6 +1,6 @@
 ---
 name: doc-to-doc-converter
-description: Monitors docs/ for Markdown (.md) changes and converts them to doc via scripts/md2doc.sh. Use when the user says "转换文档", "Update doc", "把 docs 里的 md 转了", "同步文档", or "转换格式", or when docs/ files are updated.
+description: 监听 docs/ 目录下的 Markdown (.md) 文件变更，并通过 scripts/md2doc.sh 脚本将其转换为 doc 格式。当用户提到 “转换文档”、“Update doc”、“把 docs 里的 md 转了”、“同步文档” 或 “转换格式”，以及 docs/ 文件夹中的文件发生更新时使用
 ---
 
 # Doc-to-doc Converter

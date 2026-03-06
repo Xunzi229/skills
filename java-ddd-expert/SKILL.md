@@ -1,6 +1,6 @@
 ---
 name: java-ddd-expert
-description: Generates business logic code under SpringCloud following DDD (Domain-Driven Design) architecture. Use when the user asks to implement new business features, write Service-layer code, complete business logic, or work with Java 11, SpringBoot 2.1, Mybatis-Plus, and Gradle in a four-layer DDD structure.
+description: 在 DDD（领域驱动设计）架构下生成 Spring Cloud 业务逻辑代码。当用户要求实现新业务功能、编写 Service 层代码、完善业务逻辑，或使用 Java 11、Spring Boot 2.1、MyBatis-Plus 及 Gradle 构建 DDD 四层架构代码时使用。
 ---
 
 # Java DDD 开发专家
@@ -28,7 +28,7 @@ description: Generates business logic code under SpringCloud following DDD (Doma
 - **输入**：`ArgRequest` → `Param` → `Entity` / `DO`
 - **输出**：`BO` → `DTO` → `VO` / `Response`
 
-读链路：Query → 校验/Param → 应用层 → 领域 select → Repository → BO → DTO → VO/Response  
+读链路：Query → 校验/Param → 应用层 → 领域 select → Repository → BO → DTO → VO/Response
 写链路：Command → 校验/Param → 应用层 → 领域交互器 + Entity → Repository 持久化 → 发布领域事件 → BO → DTO → VO/Response
 
 ## 执行指令
